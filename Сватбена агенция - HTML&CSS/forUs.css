@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css?family=Comfortaa&display=swap');
+
+*{
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+	color: inherit;
+}
+
+header{
+	width: 100%;
+}
+
+body{
+	font-family: Comfortaa;
+}
+
+header nav img{
+	width: 300px;
+	margin-left: 2%;
+}
+
+header nav ul li{
+	display: inline-block;
+	margin-right: 90px;
+	margin-top: 8%;
+}
+
+header nav ul li a{
+	font-family: Comfortaa;
+	font-size: 20px;
+	border:1px solid black;
+	border-radius: 20px;
+	padding: 15px;
+}
+
+header nav ul li a:hover{
+	background-color: rgb(226,189,181);
+	color: white;
+}
+
+header nav ul{
+	float: right;
+}
+
+#nachalo{
+	width: 100%;
+}
+
+#nachalo #line-pink{
+	height: 25px;
+ 	background-image: url("snimki/line-pink.png");	
+ 	background-position: center center;
+ 	border:1px solid white;
+}
+
+#nachalo #img{
+	width: 100%;
+	text-align: center;
+}
+
+#nachalo #img img{
+	width: 24%;
+}
+
+#nachalo #p{
+	width: 80%;
+	text-align: justify;
+	margin: 0 auto;
+	padding: 20px 0;
+	font-family: Comfortaa;
+	font-size: 17px;
+}
+
+#first-article{
+	width: 100%;
+	text-align: center;
+}
+
+#first-article #zaglavie{
+	font-family: Comfortaa;
+	font-size: 30px;
+	padding-bottom: 10px;
+}
+
+.films{
+	width: 350px;
+	height: 380px;
+	display: inline-block;
+	padding:10px;
+	text-align: center;
+	margin: 8px 22px;
+	border-radius: 5px;
+	background-image: linear-gradient(to top, #f6e1dd, #f4deda, #f3dbd7, #f1d9d3, #efd6d0, #edd3cd, #ecd0c9, #eacdc6, #e8c9c2, #e6c5bd, #e4c1b9, #f6e1dd);
+}
+
+.films p{
+	margin-top: 5px;
+	font-family: Comfortaa;
+	font-weight: bold;
+}
+
+.films img{
+	width: 250px;
+	border-radius: 10px;
+	margin-bottom: 10px;
+	z-index: 1;
+	box-shadow: 5px 5px 2px  #4d4d4d;
+}
+
+.filmstitle{
+	font-size: 25px;
+	margin-bottom: 10px;
+	text-shadow: 1px 1px white;
+	color: black;
+	z-index: 2;
+}
+
+#questions>div{
+	width: 50%;
+	padding-left: 6%;
+	margin: 1% 0;
+}
+
+#questions div{
+	display: inline-block;
+}
+
+#questions{
+	width: 100%;
+	/*padding: 3% 6%;*/
+	text-align: left;
+	font-family: Comfortaa;
+	line-height: 24px;
+}
+
+#questions p{
+	font-size: 17px;
+}
+
+#questions #svatba{
+	width: 35%;
+}
+
+#questions #svatba img{
+	width: 100%;
+}
+
+footer{
+	width: 100%;
+	text-align: center;
+	padding: 6px 0;
+	background-color: rgb(226,189,181);
+}
+
+footer div img{
+	width: 30px;
+}
+
+footer div img:hover{
+	width: 35px;
+}
+
+footer h3{
+	font-family: Comfortaa;
+	font-size: 17px;
+	font-weight: bold;
+	padding-bottom: 5px;
+}
+
+@media (max-width: 1200px){
+	.films{
+		width: 30%;
+		margin: 8px 8px;
+	}
+}
+
+@media(max-width: 992px){
+	header nav ul li{
+		margin-right: 40px;
+	}
+	.films{
+		width: 30%;
+		margin: 7px 0;
+	}
+}
+
+@media (max-width: 768px){
+	header {
+    text-align: center;
+	}
+	header nav ul {
+    float: none;
+	}
+	header nav ul li {
+    display: inline-block;
+    margin-right: 4%;
+    margin-top: 2%;
+    margin-bottom: 4%;
+	}
+	#nachalo #img img {
+    width: 45%;
+	}
+	.films {
+    width: 55%;
+	}
+	#questions #svatba {
+	display: none;
+	}
+	#questions{
+	text-align: justify;
+	}
+	#questions>div {
+    width: 85%;
+	}
+}
+
+@media(max-width: 480px){
+	header nav ul {
+    width: 100%;
+	}
+	header nav ul li {
+    display: block;
+    margin-top: -1%;
+    margin-bottom: 5%;
+    border-top: 1px solid black;
+    padding-top: 3%;
+    margin-right: 0;
+	}
+	header nav ul li a{
+	border: none;
+	}
+}

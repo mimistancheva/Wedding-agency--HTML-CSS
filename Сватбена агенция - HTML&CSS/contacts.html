@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="contacts.css">
+	<link href="https://fonts.googleapis.com/css?family=Comfortaa&display=swap" rel="stylesheet">
+</head>
+<body>
+	<header>
+		<nav>
+			<img src="snimki/logoc.png">
+			<ul>
+				<li><a href="index.html">Начало</a></li>
+				<li><a href="forUs.html">За нас</a></li>
+				<li><a href="services.html">Услуги</a></li>
+				<li><a href="contacts.html">Контакти</a></li>
+			</ul>
+		</nav>
+	</header>
+	<section>
+		<article id="map">
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2923.7150218459456!2d25.319142515472837!3d42.87885877915539!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40a91abd8d3c9d19%3A0x40f5cb823de96103!2z0KHQstCw0YLQsdC10L3QsCDQsNCz0LXQvdGG0LjRjyDQodCy0LDRgtCx0LXQvSDQtNC10L0!5e0!3m2!1sbg!2sbg!4v1559650319775!5m2!1sbg!2sbg" width="400" height="350" frameborder="0" style="border:0" allowfullscreen></iframe>
+		</article>
+		<article id="contacts">
+			<h2>Контакти</h2>
+			<img src="snimki/location.png"> <p>гр.Габрово, ул. "Любен Каравелов" <br>№26 (срещу Спортна зала Габрово) <br><br></p>
+			<img src="snimki/phone.png"> <p>0887 408 222 - Даниела Пенчева <br><br></p>
+			<img src="snimki/email.png"> <p>svatbenden.bg@gmail.com <br><br></p>
+			<img src="snimki/internet.png"> <p>svatbenden-bg.com</p>
+		</article>
+		<article id="more">
+			<p>Уважаеми клиенти, за да бъдем максимално полезни още при първата ни среща, ще се радваме да ни се обадите на посочените телефони, за да си уговорим час за среща. В предвид спецификата на нашата дейност, може да се срещнем по всяко удобно за вас време и в празнични или почивни дни. <br><br>Сватбена агенция "Сватбен ден" работи в цялата страна!<br><br>Работно време: Понеделник – Неделя</p>
+		</article>
+	</section>
+	<section>
+		<article id="zapitvane">
+			<h1>Изпрати запитване</h1>
+			<form action="basic.php" method="post">
+			<label for="fname">Вашето име: </label>
+			<input type="text" name="fname" id="fname" placeholder="име..." required>
+			<br>
+			<label for="lname">Фамилия: </label>
+			<input type="text" name="lname" id="lname" placeholder="фамилия..." required>
+			<br>
+			<label for="town">Град: </label>
+			<input type="text" name="town" id="town" placeholder="град..." required>
+			<br>
+			<label for="number">Номер: </label>
+			<input type="text" name="number" id="number" placeholder="тел.номер..." required>
+			<br>
+			<label for="email">E-mail: </label>
+			<input type="text" name="email" id="email" placeholder="email..." required>
+			<br>
+			<label for="note">Вашето запитване: </label>
+			<br>
+			<textarea name="notes" cols="60" rows="10" id="note" placeholder="въведете вашето запитване тук..."></textarea>
+			<br>
+			<input type="submit" value="Изпрати" id="submit" onclick="return Validate();">
+			</form>
+		</article>
+	</section>
+	<footer>
+		<h3>Връзка с нас:</h3>
+			<div>
+				<a target="_blank" href="https://www.facebook.com/"><img src="snimki/fb.png"></a>
+				<a target="_blank" href="https://www.youtube.com/"><img src="snimki/youtube.png"></a>
+				<a target="_blank" href="https://twitter.com/"><img src="snimki/twitter.png"></a>
+				<a target="_blank" href="https://www.instagram.com/?hl=bg"><img src="snimki/insta.png"></a>
+			</div>
+		<p>©Сватбена агенция "Сватбен ден" / made by: Мария Станчева</p>
+	</footer>
+
+	<script>
+		function Validate(){
+			var email = document.getElementById('email').value;
+			var fname = document.getElementById('fname').value;
+			var lname = document.getElementById('lname').value;
+			var number = document.getElementById('number').value;
+		
+			if (fname == '' || fname.length<3) {
+				alert('error name - length!');
+				return false;
+			}
+			if (lname == '' || lname.length<3) {
+				alert('error name - length!');
+				return false;
+			}
+			if (number.match(/[A-Z]/g)) {
+				allert('invalid number!');
+				return false;
+			}
+			if (number.match(/[a-z]/g)) {
+				allert('invalid number!');
+				return false;
+			}
+			if(email.indexOf('@') === -1 || email.indexOf('.') === -1){
+				alert('invalid email');
+				return false;
+			}
+		}
+	</script>
+
+</body>
+</html>
